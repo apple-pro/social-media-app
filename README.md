@@ -2,26 +2,14 @@
 A really simple Spring backend app to demonstrate that we can create a social media application with barely any code with just spring and a generic relational database
 
 
-# For Reference (My Auth Server Problem)
-Delete this once you figure out a way to generate a verifiable JWT token
+## Generating an Access Token (AWS Cognito - Client Grant)
 
-https://stackoverflow.com/questions/37941780/what-is-the-rest-or-cli-api-for-logging-in-to-amazon-cognito-user-pools
-https://docs.aws.amazon.com/cognito/latest/developerguide/amazon-cognito-user-pools-authentication-flow.html
-
-```sh
-curl -v -X POST --data @aws-auth-data.json \
--H 'X-Amz-Target: AWSCognitoIdentityProviderService.InitiateAuth' \
--H 'Content-Type: application/x-amz-json-1.1' \
-https://<cognito>.auth.us-east-1.amazoncognito.com/
-```
-
+For the initial, unauthorized request perform the following from your client
 ```json
-{
-   "AuthParameters" : {
-      "USERNAME" : "user@domain.com",
-      "PASSWORD" : "mysecret"
-   },
-   "AuthFlow" : "USER_PASSWORD_AUTH",
-   "ClientId" : "xxxxxx"
-}
+curl -v -X POST \
+--user <client_id>:<client_secret> \
+--data-urlencode 'grant_type=client_credentials' \
+--data-urlencode 'client_id=<client_id>' \
+--data-urlencode 'scope=<CSV scopes>' \
+https://<your domain>.auth.us-east-1.amazoncognito.com/oauth2/token
 ```
