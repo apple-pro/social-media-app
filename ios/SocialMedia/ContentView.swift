@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import Combine
 import Amplify
 
 
@@ -21,9 +20,31 @@ struct ContentView: View {
             } else {
                 Login()
             }
+        }.onAppear {
+            listenToAuthEvents()
         }
     }
     
+    func listenToAuthEvents() {
+        Amplify.Hub.listen(to: .auth) { payload in
+            switch payload.eventName {
+            case HubPayload.EventName.Auth.signedIn:
+                print("User signed in")
+                userLoggedIn = true
+                
+            case HubPayload.EventName.Auth.sessionExpired:
+                print("Session expired")
+                userLoggedIn = false
+                
+            case HubPayload.EventName.Auth.signedOut:
+                print("User signed out")
+                userLoggedIn = false
+                
+            default:
+                break
+            }
+        }
+    }
 }
 
 struct ContentView_Previews: PreviewProvider {

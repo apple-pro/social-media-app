@@ -37,7 +37,7 @@ struct SignUp: View {
                 
                 Button("Verify") {
                     error = nil
-                    _ = confirmSignUp(for: username, with: verificationCode)
+                    confirmSignUp(for: username, with: verificationCode)
                 }
                 
             } else {
