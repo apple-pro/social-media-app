@@ -5,3 +5,10 @@ spring:
         jwt:
           # https://docs.aws.amazon.com/cognito/latest/developerguide/amazon-cognito-user-pools-using-tokens-verifying-a-jwt.html
           jwk-set-uri: https://cognito-idp.us-east-1.amazonaws.com/us-east-1_<cognito_userpool_id>/.well-known/jwks.json
+
+
+services:
+  aws.cognito:
+    accessKey: "String"
+    accessSecret: "String"
+    id: "String"
