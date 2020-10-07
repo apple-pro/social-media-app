@@ -5,7 +5,7 @@ import org.springframework.data.jpa.repository.JpaRepository
 import org.springframework.security.access.prepost.PreAuthorize
 import java.util.*
 
-@PreAuthorize("hasAuthority('SCOPE_registration')")
+@PreAuthorize("hasAuthority('SCOPE_social/registration')")
 interface RegistrationRepository : JpaRepository<Registration, UUID> {
 
     fun findFirstByEmailAndConfirmationCode(email: String, confirmationCode: String): Registration?

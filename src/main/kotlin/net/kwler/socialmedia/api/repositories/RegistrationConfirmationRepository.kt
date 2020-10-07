@@ -5,5 +5,5 @@ import org.springframework.data.jpa.repository.JpaRepository
 import org.springframework.security.access.prepost.PreAuthorize
 import java.util.*
 
-@PreAuthorize("hasAuthority('SCOPE_registration')")
+@PreAuthorize("hasAuthority('SCOPE_social/registration')")
 interface RegistrationConfirmationRepository : JpaRepository<RegistrationConfirmation, UUID>
