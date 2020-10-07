@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="32fce107-a0f4-4388-b968-5aed605e3a90" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Kotlin Interface" />
+        <option value="Kotlin Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$APPLICATION_HOME_DIR$/plugins/maven/lib/maven3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectId" id="1iUqXaSrrxcIa1Vi8aG0bQiR3AH" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="show.unlinked.gradle.project.popup" value="true" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SocialMediaBackendApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="social-media-backend.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="net.kwler.socialmedia.api.SocialMediaBackendApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <additionalParameters>
+        <param>
+          <option name="enabled" value="true" />
+          <option name="name" value="spring.security.oauth2.resourceserver.jwt.jwk-set-uri" />
+          <option name="value" value="https://cognito-idp.us-east-1.amazonaws.com/us-east-1_KAQH7GYmP/.well-known/jwks.json" />
+        </param>
+      </additionalParameters>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="32fce107-a0f4-4388-b968-5aed605e3a90" name="Default Changelist" comment="" />
+      <created>1601972560359</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1601972560359</updated>
+      <workItem from="1601972561982" duration="531000" />
+      <workItem from="1601973354248" duration="13262000" />
+      <workItem from="1602028721375" duration="5467000" />
+      <workItem from="1602052332290" duration="2799000" />
+    </task>
+    <task id="LOCAL-00001" summary="initial work for issue #1 &#10;WIP: sample registration process">
+      <created>1601975080315</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1601975080315</updated>
+    </task>
+    <task id="LOCAL-00002" summary="#1 : registration confirmation logic">
+      <created>1601982068915</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1601982068915</updated>
+    </task>
+    <task id="LOCAL-00003" summary="#1 : create a person after confirmation">
+      <created>1601986220123</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1601986220123</updated>
+    </task>
+    <task id="LOCAL-00004" summary="#1: add resource server security">
+      <created>1602037802429</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1602037802430</updated>
+    </task>
+    <task id="LOCAL-00005" summary="#1: demonstrate method-level scope security">
+      <created>1602038731579</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1602038731580</updated>
+    </task>
+    <task id="LOCAL-00006" summary="#1: WIP - trying to install cognito, step 1 complete">
+      <created>1602054483427</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1602054483427</updated>
+    </task>
+    <task id="LOCAL-00007" summary="#1: WIP - trying to install cognito, step 1 complete">
+      <created>1602062614609</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1602062614609</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="initial work for issue #1 &#10;WIP: sample registration process" />
+    <MESSAGE value="#1 : registration confirmation logic" />
+    <MESSAGE value="#1 : create a person after confirmation" />
+    <MESSAGE value="#1: add resource server security" />
+    <MESSAGE value="#1: demonstrate method-level scope security" />
+    <MESSAGE value="#1: WIP - trying to install cognito, step 1 complete" />
+    <option name="LAST_COMMIT_MESSAGE" value="#1: WIP - trying to install cognito, step 1 complete" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1588" y="568" width="1071" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602037696019">
+      <screen x="0" y="23" width="3008" height="1669" />
+    </state>
+    <state x="1588" y="568" width="1071" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1151.-654.1151.1920/0.23.3008.1669@0.23.3008.1669" timestamp="1602037696019" />
+    <state x="536" y="580" key="#com.intellij.ide.util.MemberChooser" timestamp="1602053156930">
+      <screen x="0" y="23" width="3008" height="1669" />
+    </state>
+    <state x="536" y="580" key="#com.intellij.ide.util.MemberChooser/-1151.-654.1151.1920/0.23.3008.1669@0.23.3008.1669" timestamp="1601975559141" />
+    <state x="536" y="580" key="#com.intellij.ide.util.MemberChooser/-1151.-674.1151.1920/0.23.3008.1669@0.23.3008.1669" timestamp="1602053156930" />
+    <state x="490" y="611" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1601977152400">
+      <screen x="0" y="23" width="3008" height="1669" />
+    </state>
+    <state x="490" y="611" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-1151.-654.1151.1920/0.23.3008.1669@0.23.3008.1669" timestamp="1601977152400" />
+    <state width="1462" height="649" key="GridCell.Tab.0.bottom" timestamp="1602062633392">
+      <screen x="0" y="23" width="3008" height="1669" />
+    </state>
+    <state width="1462" height="492" key="GridCell.Tab.0.bottom/-1151.-654.1151.1920/0.23.3008.1669@0.23.3008.1669" timestamp="1602038765544" />
+    <state width="1462" height="649" key="GridCell.Tab.0.bottom/-1151.-674.1151.1920/0.23.3008.1669@0.23.3008.1669" timestamp="1602062633392" />
+    <state width="1462" height="649" key="GridCell.Tab.0.center" timestamp="1602062633391">
+      <screen x="0" y="23" width="3008" height="1669" />
+    </state>
+    <state width="1462" height="492" key="GridCell.Tab.0.center/-1151.-654.1151.1920/0.23.3008.1669@0.23.3008.1669" timestamp="1602038765543" />
+    <state width="1462" height="649" key="GridCell.Tab.0.center/-1151.-674.1151.1920/0.23.3008.1669@0.23.3008.1669" timestamp="1602062633391" />
+    <state width="1462" height="649" key="GridCell.Tab.0.left" timestamp="1602062633389">
+      <screen x="0" y="23" width="3008" height="1669" />
+    </state>
+    <state width="1462" height="492" key="GridCell.Tab.0.left/-1151.-654.1151.1920/0.23.3008.1669@0.23.3008.1669" timestamp="1602038765543" />
+    <state width="1462" height="649" key="GridCell.Tab.0.left/-1151.-674.1151.1920/0.23.3008.1669@0.23.3008.1669" timestamp="1602062633389" />
+    <state width="1462" height="649" key="GridCell.Tab.0.right" timestamp="1602062633392">
+      <screen x="0" y="23" width="3008" height="1669" />
+    </state>
+    <state width="1462" height="492" key="GridCell.Tab.0.right/-1151.-654.1151.1920/0.23.3008.1669@0.23.3008.1669" timestamp="1602038765544" />
+    <state width="1462" height="649" key="GridCell.Tab.0.right/-1151.-674.1151.1920/0.23.3008.1669@0.23.3008.1669" timestamp="1602062633392" />
+    <state width="1462" height="649" key="GridCell.Tab.1.bottom" timestamp="1602062633395">
+      <screen x="0" y="23" width="3008" height="1669" />
+    </state>
+    <state width="1462" height="492" key="GridCell.Tab.1.bottom/-1151.-654.1151.1920/0.23.3008.1669@0.23.3008.1669" timestamp="1602038765546" />
+    <state width="1462" height="649" key="GridCell.Tab.1.bottom/-1151.-674.1151.1920/0.23.3008.1669@0.23.3008.1669" timestamp="1602062633395" />
+    <state width="1462" height="649" key="GridCell.Tab.1.center" timestamp="1602062633394">
+      <screen x="0" y="23" width="3008" height="1669" />
+    </state>
+    <state width="1462" height="492" key="GridCell.Tab.1.center/-1151.-654.1151.1920/0.23.3008.1669@0.23.3008.1669" timestamp="1602038765545" />
+    <state width="1462" height="649" key="GridCell.Tab.1.center/-1151.-674.1151.1920/0.23.3008.1669@0.23.3008.1669" timestamp="1602062633394" />
+    <state width="1462" height="649" key="GridCell.Tab.1.left" timestamp="1602062633393">
+      <screen x="0" y="23" width="3008" height="1669" />
+    </state>
+    <state width="1462" height="492" key="GridCell.Tab.1.left/-1151.-654.1151.1920/0.23.3008.1669@0.23.3008.1669" timestamp="1602038765545" />
+    <state width="1462" height="649" key="GridCell.Tab.1.left/-1151.-674.1151.1920/0.23.3008.1669@0.23.3008.1669" timestamp="1602062633393" />
+    <state width="1462" height="649" key="GridCell.Tab.1.right" timestamp="1602062633394">
+      <screen x="0" y="23" width="3008" height="1669" />
+    </state>
+    <state width="1462" height="492" key="GridCell.Tab.1.right/-1151.-654.1151.1920/0.23.3008.1669@0.23.3008.1669" timestamp="1602038765545" />
+    <state width="1462" height="649" key="GridCell.Tab.1.right/-1151.-674.1151.1920/0.23.3008.1669@0.23.3008.1669" timestamp="1602062633394" />
+    <state x="1186" y="567" key="RollbackChangesDialog" timestamp="1602062595742">
+      <screen x="0" y="23" width="3008" height="1669" />
+    </state>
+    <state x="1186" y="567" key="RollbackChangesDialog/-1151.-674.1151.1920/0.23.3008.1669@0.23.3008.1669" timestamp="1602062595742" />
+    <state x="352" y="597" key="Vcs.Push.Dialog.v2" timestamp="1601975094905">
+      <screen x="0" y="23" width="3008" height="1669" />
+    </state>
+    <state x="352" y="597" key="Vcs.Push.Dialog.v2/-1151.-654.1151.1920/0.23.3008.1669@0.23.3008.1669" timestamp="1601975094905" />
+    <state x="417" y="411" width="670" height="676" key="search.everywhere.popup" timestamp="1602037808742">
+      <screen x="0" y="23" width="3008" height="1669" />
+    </state>
+    <state x="417" y="411" width="670" height="676" key="search.everywhere.popup/-1151.-654.1151.1920/0.23.3008.1669@0.23.3008.1669" timestamp="1602037808742" />
+  </component>
+</project>
