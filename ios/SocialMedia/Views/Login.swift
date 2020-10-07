@@ -6,9 +6,11 @@
 //
 
 import SwiftUI
+import Amplify
 
 struct Login: View {
     
+    @State var error = ""
     @State var username = ""
     @State var password = ""
     
@@ -19,6 +21,12 @@ struct Login: View {
             
             Section(header: Text("Login")) {
                 
+                if !error.isEmpty {
+                    Text(error)
+                        .foregroundColor(.red)
+                        .font(.caption)
+                }
+                
                 TextField("Username", text: $username)
                     .autocapitalization(/*@START_MENU_TOKEN@*/.none/*@END_MENU_TOKEN@*/)
                     .disableAutocorrection(true)
@@ -26,13 +34,14 @@ struct Login: View {
                 SecureField("Password", text: $password)
                 
                 Button("Login") {
-                    
+                    signIn(username: username, password: password)
                 }
             }
             
             Section(header: Text("Register")) {
                 
                 Button("Register") {
+                    error = ""
                     showSignUp.toggle()
                 }
             }
@@ -43,6 +52,18 @@ struct Login: View {
         }
     }
     
+    func signIn(username: String, password: String) {
+        Amplify.Auth.signIn(username: username, password: password) { result in
+            switch result {
+            case .success:
+                print("Sign in succeeded")
+            case .failure(let e):
+                error = e.errorDescription
+                print("Sign in failed \(error)")
+                
+            }
+        }
+    }
     
 }
 

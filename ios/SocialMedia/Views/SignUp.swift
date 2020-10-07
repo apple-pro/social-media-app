@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import Combine
 import Amplify
 
 struct SignUp: View {
@@ -33,6 +32,7 @@ struct SignUp: View {
                         .disableAutocorrection(true)
                     
                     Text("A verification code was sent to \(email)")
+                        .font(.caption)
                 }
                 
                 Button("Verify") {
@@ -68,8 +68,8 @@ struct SignUp: View {
                 }
                 
                 Button("Register") {
+                    signUp(username: username, password: password, email: email, givenName: givenName, familyName: familyName)
                     error = nil
-                    _ = signUp(username: username, password: password, email: email, givenName: givenName, familyName: familyName)
                     verificationMode = true
                 }
             }
@@ -77,7 +77,7 @@ struct SignUp: View {
         }
     }
     
-    func signUp(username: String, password: String, email: String, givenName: String, familyName: String) -> AnyCancellable {
+    func signUp(username: String, password: String, email: String, givenName: String, familyName: String) {
         
         let userAttributes = [
             AuthUserAttribute(.email, value: email),
@@ -87,34 +87,30 @@ struct SignUp: View {
         
         let options = AuthSignUpRequest.Options(userAttributes: userAttributes)
         
-        return Amplify.Auth.signUp(username: username, password: password, options: options)
-            .resultPublisher
-            .sink {
-                if case let .failure(authError) = $0 {
-                    error = authError.errorDescription
-                }
-            }
-            receiveValue: { signUpResult in
+        Amplify.Auth.signUp(username: username, password: password, options: options) { result in
+            switch result {
+            case .success(let signUpResult):
                 if case let .confirmUser(deliveryDetails, _) = signUpResult.nextStep {
                     print("Delivery details \(String(describing: deliveryDetails))")
                 } else {
                     print("SignUp Complete")
                 }
-                
+            case .failure(let error):
+                print("An error occurred while registering a user \(error)")
             }
+        }
     }
     
-    func confirmSignUp(for username: String, with confirmationCode: String) -> AnyCancellable {
-        Amplify.Auth.confirmSignUp(for: username, confirmationCode: confirmationCode)
-            .resultPublisher
-            .sink {
-                if case let .failure(authError) = $0 {
-                    print("An error occurred while confirming sign up \(authError)")
-                }
-            }
-            receiveValue: { _ in
+    func confirmSignUp(for username: String, with confirmationCode: String) {
+        
+        Amplify.Auth.confirmSignUp(for: username, confirmationCode: confirmationCode) { result in
+            switch result {
+            case .success:
                 print("Confirm signUp succeeded")
+            case .failure(let error):
+                print("An error occurred while confirming sign up \(error)")
             }
+        }
     }
 }
 
