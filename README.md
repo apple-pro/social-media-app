@@ -1,5 +1,5 @@
-# Social Media Application Backend
-A really simple Spring backend app to demonstrate that we can create a social media application with barely any code with just spring and a generic relational database
+# Social Media Application
+A basi social media application running on the AWS cloud, built on Spring (Backend) and iOS (Mobile App).
 
 
 ## Generating an Access Token (AWS Cognito - Client Grant)
