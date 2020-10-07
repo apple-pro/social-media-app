@@ -98,8 +98,8 @@
 		F01E800F252DFE740052234C /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				F01E8010252DFE8C0052234C /* SignUp.swift */,
 				F01E8013252DFEB10052234C /* Login.swift */,
+				F01E8010252DFE8C0052234C /* SignUp.swift */,
 				F01E8016252DFF630052234C /* UserProfile.swift */,
 			);
 			path = Views;

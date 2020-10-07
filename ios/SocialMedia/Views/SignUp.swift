@@ -14,10 +14,13 @@ struct SignUp: View {
     @State var username = ""
     @State var password = ""
     
+    @State var givenName = ""
+    @State var familyName = ""
+    @State var email = ""
+    
     @State var error: String?
     
     @State var verificationMode = false
-    @State var registrationRequest: AnyCancellable?
     
     var body: some View {
         Form {
@@ -27,35 +30,48 @@ struct SignUp: View {
                     .foregroundColor(.red)
             }
             
-            TextField("Username", text: $username)
-                .autocapitalization(/*@START_MENU_TOKEN@*/.none/*@END_MENU_TOKEN@*/)
-                .disableAutocorrection(true)
+            Section(header: Text("Account")) {
+                TextField("Username", text: $username)
+                    .autocapitalization(/*@START_MENU_TOKEN@*/.none/*@END_MENU_TOKEN@*/)
+                    .disableAutocorrection(true)
+                
+                SecureField("Password", text: $password)
+            }
             
-            SecureField("Password", text: $password)
+            Section(header: Text("Profile")) {
+                TextField("Given Name", text: $givenName)
+                    .disableAutocorrection(true)
+                
+                TextField("Family Name", text: $familyName)
+                    .disableAutocorrection(true)
+                
+                TextField("Email", text: $email)
+                    .autocapitalization(/*@START_MENU_TOKEN@*/.none/*@END_MENU_TOKEN@*/)
+                    .disableAutocorrection(true)
+            }
             
             Button("Register") {
                 error = nil
-                registrationRequest = signUp(username: username, password: password, email: username)
-            }
-            
-            if registrationRequest != nil {
-                Button("Cancel") {
-                    registrationRequest?.cancel()
-                }
+                _ = signUp(username: username, password: password, email: email, givenName: givenName, familyName: familyName)
             }
         }
     }
     
-    func signUp(username: String, password: String, email: String) -> AnyCancellable {
-        let userAttributes = [AuthUserAttribute(.email, value: email)]
+    func signUp(username: String, password: String, email: String, givenName: String, familyName: String) -> AnyCancellable {
+        
+        let userAttributes = [
+            AuthUserAttribute(.email, value: email),
+            AuthUserAttribute(.givenName, value: givenName),
+            AuthUserAttribute(.familyName, value: familyName)
+        ]
+        
         let options = AuthSignUpRequest.Options(userAttributes: userAttributes)
         
         return Amplify.Auth.signUp(username: username, password: password, options: options)
             .resultPublisher
             .sink {
-                registrationRequest = nil
                 if case let .failure(authError) = $0 {
-                    print("An error occurred while registering a user \(authError)")
+                    error = authError.errorDescription
                 }
             }
             receiveValue: { signUpResult in
