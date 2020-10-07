@@ -20,40 +20,60 @@ struct SignUp: View {
     
     @State var error: String?
     
+    @State var verificationCode = ""
     @State var verificationMode = false
     
     var body: some View {
         Form {
             
-            if let errorMessage = self.error {
-                Text("Error: \(errorMessage)")
-                    .foregroundColor(.red)
+            if verificationMode {
+                
+                Section(header: Text("Verification")) {
+                    TextField("Code", text: $verificationCode)
+                        .disableAutocorrection(true)
+                    
+                    Text("A verification code was sent to \(email)")
+                }
+                
+                Button("Verify") {
+                    error = nil
+                    _ = confirmSignUp(for: username, with: verificationCode)
+                }
+                
+            } else {
+                
+                if let errorMessage = self.error {
+                    Text("Error: \(errorMessage)")
+                        .foregroundColor(.red)
+                }
+                
+                Section(header: Text("Account")) {
+                    TextField("Username", text: $username)
+                        .autocapitalization(/*@START_MENU_TOKEN@*/.none/*@END_MENU_TOKEN@*/)
+                        .disableAutocorrection(true)
+                    
+                    SecureField("Password", text: $password)
+                }
+                
+                Section(header: Text("Profile")) {
+                    TextField("Given Name", text: $givenName)
+                        .disableAutocorrection(true)
+                    
+                    TextField("Family Name", text: $familyName)
+                        .disableAutocorrection(true)
+                    
+                    TextField("Email", text: $email)
+                        .autocapitalization(/*@START_MENU_TOKEN@*/.none/*@END_MENU_TOKEN@*/)
+                        .disableAutocorrection(true)
+                }
+                
+                Button("Register") {
+                    error = nil
+                    _ = signUp(username: username, password: password, email: email, givenName: givenName, familyName: familyName)
+                    verificationMode = true
+                }
             }
             
-            Section(header: Text("Account")) {
-                TextField("Username", text: $username)
-                    .autocapitalization(/*@START_MENU_TOKEN@*/.none/*@END_MENU_TOKEN@*/)
-                    .disableAutocorrection(true)
-                
-                SecureField("Password", text: $password)
-            }
-            
-            Section(header: Text("Profile")) {
-                TextField("Given Name", text: $givenName)
-                    .disableAutocorrection(true)
-                
-                TextField("Family Name", text: $familyName)
-                    .disableAutocorrection(true)
-                
-                TextField("Email", text: $email)
-                    .autocapitalization(/*@START_MENU_TOKEN@*/.none/*@END_MENU_TOKEN@*/)
-                    .disableAutocorrection(true)
-            }
-            
-            Button("Register") {
-                error = nil
-                _ = signUp(username: username, password: password, email: email, givenName: givenName, familyName: familyName)
-            }
         }
     }
     
@@ -83,11 +103,18 @@ struct SignUp: View {
                 
             }
     }
-}
-
-struct SignUpVerification: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+    
+    func confirmSignUp(for username: String, with confirmationCode: String) -> AnyCancellable {
+        Amplify.Auth.confirmSignUp(for: username, confirmationCode: confirmationCode)
+            .resultPublisher
+            .sink {
+                if case let .failure(authError) = $0 {
+                    print("An error occurred while confirming sign up \(authError)")
+                }
+            }
+            receiveValue: { _ in
+                print("Confirm signUp succeeded")
+            }
     }
 }
 
