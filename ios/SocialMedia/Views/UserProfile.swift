@@ -35,7 +35,7 @@ struct UserProfile: View {
                 }
                 
                 Button("Logout") {
-                    
+                    endSession()
                 }
                 
             } else {
@@ -77,6 +77,10 @@ struct UserProfile: View {
                 errorMessage = error.localizedDescription
             }
         }
+    }
+    
+    func endSession() {
+        Amplify.Auth.signOut()
     }
     
 }
