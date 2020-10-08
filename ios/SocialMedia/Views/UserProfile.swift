@@ -12,7 +12,10 @@ struct UserProfile: View {
     
     @State var errorMessage = ""
     @State var dataLoaded = false
+    
     @State var givenName = ""
+    @State var familyName = ""
+    @State var email = ""
     
     var body: some View {
         Form {
@@ -25,7 +28,15 @@ struct UserProfile: View {
             
             if dataLoaded {
                 
-                TextField("Given Name", text: $givenName)
+                Section(header: Text("Profile")) {
+                    TextField("Given Name", text: $givenName)
+                    TextField("Family Name", text: $familyName)
+                    TextField("Email Name", text: $email)
+                }
+                
+                Button("Logout") {
+                    
+                }
                 
             } else {
                 
@@ -52,6 +63,14 @@ struct UserProfile: View {
                 if let givenNameAttribute = attributes.first (where: { a in a.key == .givenName } ) {
                     givenName = givenNameAttribute.value
                 }
+                
+                if let familyNameAttribute = attributes.first (where: { a in a.key == .familyName } ) {
+                    familyName = familyNameAttribute.value
+                }
+                
+                if let emailAttribute = attributes.first (where: { a in a.key == .email } ) {
+                    email = emailAttribute.value
+                }
             case .failure(let error):
                 print("Fetching user attributes failed with error \(error)")
                 dataLoaded = false
@@ -59,6 +78,7 @@ struct UserProfile: View {
             }
         }
     }
+    
 }
 
 struct UserProfile_Previews: PreviewProvider {
