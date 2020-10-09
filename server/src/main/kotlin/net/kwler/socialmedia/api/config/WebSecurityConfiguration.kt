@@ -13,7 +13,11 @@ class WebSecurityConfiguration : WebSecurityConfigurerAdapter() {
 
     override fun configure(http: HttpSecurity?) {
         http
-                ?.authorizeRequests { it.antMatchers("explorer/index.html").permitAll() }
+                ?.authorizeRequests { it.antMatchers(
+                        "explorer/index.html",
+                        "v3/api-docs",
+                        "swagger-ui/**"
+                ).permitAll() }
                 ?.oauth2ResourceServer { it.jwt() }
     }
 }
