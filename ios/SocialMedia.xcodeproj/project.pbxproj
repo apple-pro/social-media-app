@@ -15,6 +15,7 @@
 		F01E8011252DFE8C0052234C /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01E8010252DFE8C0052234C /* SignUp.swift */; };
 		F01E8014252DFEB10052234C /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01E8013252DFEB10052234C /* Login.swift */; };
 		F01E8017252DFF630052234C /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01E8016252DFF630052234C /* UserProfile.swift */; };
+		F05C0D142530AB4B00F489C1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05C0D132530AB4B00F489C1 /* Constants.swift */; };
 		F0EDFA2B252DF227003606C7 /* amplifyconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = F0EDFA2A252DF227003606C7 /* amplifyconfiguration.json */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		F01E8010252DFE8C0052234C /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		F01E8013252DFEB10052234C /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		F01E8016252DFF630052234C /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		F05C0D132530AB4B00F489C1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F0EDFA2A252DF227003606C7 /* amplifyconfiguration.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = amplifyconfiguration.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,6 +80,7 @@
 			children = (
 				F015A519252DC22B0099D293 /* SocialMediaApp.swift */,
 				F015A51B252DC22B0099D293 /* ContentView.swift */,
+				F05C0D132530AB4B00F489C1 /* Constants.swift */,
 				F01E800F252DFE740052234C /* Views */,
 				F015A51D252DC22D0099D293 /* Assets.xcassets */,
 				F015A522252DC22D0099D293 /* Info.plist */,
@@ -232,6 +235,7 @@
 				F01E8017252DFF630052234C /* UserProfile.swift in Sources */,
 				F015A51A252DC22B0099D293 /* SocialMediaApp.swift in Sources */,
 				F01E8014252DFEB10052234C /* Login.swift in Sources */,
+				F05C0D142530AB4B00F489C1 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

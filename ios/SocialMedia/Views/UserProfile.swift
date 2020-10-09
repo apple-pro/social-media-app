@@ -34,6 +34,10 @@ struct UserProfile: View {
                     TextField("Email Name", text: $email)
                 }
                 
+                Button("Demo API Call") {
+                    callAPI()
+                }
+                
                 Button("Logout") {
                     endSession()
                 }
@@ -81,6 +85,12 @@ struct UserProfile: View {
     
     func endSession() {
         Amplify.Auth.signOut()
+    }
+    
+    func callAPI() {
+        Amplify.Auth.fetchAuthSession { sessionResult in
+            print(sessionResult)
+        }
     }
     
 }

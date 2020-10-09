@@ -53,7 +53,6 @@ struct ContentView: View {
                 loginState = .unauthenticated
                 
             default:
-                loginState = .authenticated
                 break
             }
         }
@@ -79,12 +78,17 @@ struct PleaseWait: View {
     var body: some View {
         
         VStack {
-            Text("Please wait...")
+            Text("Social Media")
+                .font(.largeTitle)
+                .foregroundColor(.white)
             
             Button("Retry") {
                 
             }
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(Color.FBBlue)
+        .edgesIgnoringSafeArea(.all)
         .onAppear {
             fetchAttributes()
         }
@@ -103,6 +107,7 @@ struct PleaseWait: View {
             }
         }
     }
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
