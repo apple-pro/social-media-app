@@ -88,8 +88,10 @@ struct UserProfile: View {
     }
     
     func callAPI() {
-        Amplify.Auth.fetchAuthSession { sessionResult in
-            print(sessionResult)
+        //https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-enable-cognito-user-pool.html
+        let request = RESTRequest(apiName: "Backend", path: "/registrations")
+        Amplify.API.get(request: request) { result in
+            print(result)
         }
     }
     

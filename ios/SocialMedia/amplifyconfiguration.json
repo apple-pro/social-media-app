@@ -28,5 +28,17 @@
                 }
             }
         }
+    },
+    
+    "api": {
+        "plugins": {
+            "awsAPIPlugin": {
+                "Backend": {
+                    "endpointType": "REST",
+                    "endpoint": "http://localhost:8080",
+                    "authorizationType": "AMAZON_COGNITO_USER_POOLS"
+                }
+            }
+        }
     }
 }

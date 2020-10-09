@@ -7,5 +7,6 @@ target 'SocialMedia' do
   # Pods for SocialMedia
   pod 'Amplify'
   pod 'AmplifyPlugins/AWSCognitoAuthPlugin'
+  pod 'AmplifyPlugins/AWSAPIPlugin'
 
 end

@@ -84,8 +84,8 @@
 				F01E800F252DFE740052234C /* Views */,
 				F015A51D252DC22D0099D293 /* Assets.xcassets */,
 				F015A522252DC22D0099D293 /* Info.plist */,
-				F015A51F252DC22D0099D293 /* Preview Content */,
 				F0EDFA2A252DF227003606C7 /* amplifyconfiguration.json */,
+				F015A51F252DC22D0099D293 /* Preview Content */,
 			);
 			path = SocialMedia;
 			sourceTree = "<group>";
