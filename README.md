@@ -1,5 +1,7 @@
 # Social Media Application
-A basi social media application running on the AWS cloud, built on Spring (Backend) and iOS (Mobile App).
+![Logo](ios/SocialMedia/Assets.xcassets/AppIcon.appiconset/180.png)
+
+A basic social media application running on the AWS cloud, built on Spring (Backend) and iOS (Mobile App).
 
 
 ## Generating an Access Token (AWS Cognito - Client Grant)
